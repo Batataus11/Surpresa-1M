@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#16070d">
+<title>Para a Minha Mulher ❤️</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--pink:#ff527f;--rose:#ff8da8;--wine:#5b102b;--glass:rgba(35,12,24,.72);--line:rgba(255,255,255,.14)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;color:#fff;font-family:"DM Sans",sans-serif;background:#10070c;overflow-x:hidden}
+button{font:inherit}
+#background{position:fixed;inset:0;z-index:-3;background:linear-gradient(130deg,#16070d,#3b0d24,#170911,#4b1026);background-size:300% 300%;animation:gradient 18s ease infinite}
+#background:before,#background:after{content:"";position:absolute;border-radius:50%;filter:blur(70px);opacity:.3;animation:drift 16s ease-in-out infinite alternate}
+#background:before{width:45vw;height:45vw;max-width:520px;max-height:520px;background:#ff245e;top:-12%;left:-10%}
+#background:after{width:50vw;height:50vw;max-width:600px;max-height:600px;background:#7d1749;bottom:-18%;right:-10%;animation-delay:-5s}
+#shade{position:fixed;inset:0;z-index:-2;background:rgba(8,3,7,.38);pointer-events:none}
+#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:5}
+.wrap{width:min(1040px,100%);margin:auto;padding:clamp(14px,3vw,30px)}
+header{display:flex;align-items:center;gap:14px;padding:14px 17px;border:1px solid var(--line);border-radius:22px;background:rgba(255,255,255,.07);backdrop-filter:blur(14px);box-shadow:0 15px 50px #0002}
+.logo{width:54px;height:54px;flex:0 0 54px;display:grid;place-items:center;border-radius:17px;background:linear-gradient(145deg,#ff7094,#c91f55);font-size:26px;box-shadow:0 7px 24px #ff527f44}
+header h1{font:700 clamp(17px,3vw,23px) "Playfair Display",serif;margin:0}
+header p{margin:4px 0 0;color:#f5cad7;font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+.hero{padding:clamp(22px,5vw,48px) 0 18px;text-align:center}
+.eyebrow{color:#ffc1d1;font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:700}
+h2,h3{font-family:"Playfair Display",serif}
+.hero h2{font-size:clamp(34px,7vw,68px);line-height:1.06;margin:13px auto 14px;max-width:850px;text-wrap:balance}
+.hero h2 span{color:#ff8eac;text-shadow:0 0 35px #ff527f44}
+.lead{max-width:670px;margin:0 auto;color:#f4e7ec;line-height:1.75;font-size:clamp(15px,2.2vw,18px)}
+.panel{border:1px solid var(--line);border-radius:25px;background:var(--glass);backdrop-filter:blur(15px);box-shadow:0 20px 60px #0003;padding:clamp(18px,4vw,30px);margin:18px 0}
+.section-title{text-align:center;margin:0 0 8px;font-size:clamp(25px,4vw,36px)}
+.section-sub{text-align:center;color:#e7c8d3;line-height:1.6;margin:0 auto 22px;max-width:600px}
+.message{max-width:780px;margin:auto;line-height:1.85;color:#fff1f5;font-size:16px}
+.signature{display:block;text-align:center;color:#ff9db7;font-weight:700;margin-top:20px;font-size:clamp(15px,2.5vw,19px)}
+.actions{display:flex;justify-content:center;flex-wrap:wrap;gap:11px;margin-top:24px}
+.btn{border:1px solid transparent;border-radius:999px;padding:13px 20px;min-height:46px;color:white;font-weight:700;cursor:pointer;transition:transform .2s,filter .2s,background .2s;display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
+.btn:focus-visible{outline:3px solid #ffd2df;outline-offset:3px}
+.btn-main{background:linear-gradient(110deg,#ff5d88,#c51d54);box-shadow:0 9px 28px #ff527f30}
+.btn-soft{background:#ffffff0c;border-color:#ffffff38}
+.music-box{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.music-info{display:flex;align-items:center;gap:12px;min-width:0}
+.music-disc{width:46px;height:46px;flex:0 0 46px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#ff7a9f,#74153a);box-shadow:0 0 0 6px #ff527f12}
+.music-info strong{display:block}
+.music-info small{display:block;color:#e6bdca;margin-top:4px}
+audio{width:100%;height:38px;accent-color:#ff527f}
+.music-player{flex:1 1 230px;max-width:430px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.memory{overflow:hidden;border:1px solid var(--line);border-radius:19px;background:#ffffff08;min-width:0}
+.memory img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:linear-gradient(135deg,#572039,#210d18);color:#ffe4ed}
+.memory .memory-text{padding:16px}
+.memory h3{font-size:20px;margin:0 0 8px}
+.memory p{color:#e8d4dc;line-height:1.65;font-size:14px;margin:0}
+.photo-hint{color:#cfaebb;font-size:12px;margin-top:12px;text-align:center}
+.surprise-card{position:relative;overflow:hidden;text-align:center;background:linear-gradient(145deg,#4d1028d9,#1a0b14e8);border:1px solid #ff9db744}
+.surprise-card:before{content:"♡";position:absolute;font-size:180px;line-height:1;right:-10px;top:-45px;color:#ff91b30d;pointer-events:none}
+.surprise-card p{max-width:620px;margin:0 auto;color:#f6e1e8;line-height:1.7}
+footer{text-align:center;color:#d9b9c5;padding:24px 10px 35px;font-size:13px}
+#surpriseModal{display:none;position:fixed;inset:0;z-index:20;overflow-y:auto;padding:18px;background:rgba(8,2,7,.94);backdrop-filter:blur(16px);align-items:flex-start;justify-content:center}
+#surpriseModal.open{display:flex;animation:fade .35s ease}
+.modal-inner{width:min(760px,100%);margin:auto;position:relative;border:1px solid #ff8ba955;border-radius:25px;padding:clamp(20px,4vw,38px);background:linear-gradient(150deg,#3b0d22,#170911 70%);box-shadow:0 25px 100px #0008;text-align:center}
+.close-x{position:absolute;top:12px;right:12px;width:42px;height:42px;border:1px solid #ffffff30;border-radius:50%;background:#ffffff0c;color:white;font-size:23px;cursor:pointer}
+.modal-inner h2{font-size:clamp(32px,7vw,54px);color:#ff91ad;margin:12px 35px 12px;text-shadow:0 0 30px #ff527f35}
+.modal-inner .dedication{max-width:650px;margin:0 auto;line-height:1.85;color:#ffedf2}
+.surprise-photo{display:block;width:min(100%,520px);aspect-ratio:4/3;object-fit:cover;border-radius:19px;margin:22px auto;border:1px solid #ff9ab755;background:#351021;color:#ffe6ee}
+#modalMusic{margin:20px auto 0;max-width:500px}
+.heart-pop{position:fixed;pointer-events:none;z-index:30;font-size:24px;animation:pop 1.5s ease-out forwards}
+@keyframes gradient{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+@keyframes drift{to{transform:translate(8vw,7vh) scale(1.15)}}
+@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pop{to{transform:translateY(-130px) rotate(20deg) scale(1.4);opacity:0}}
+@media(max-width:700px){.grid{grid-template-columns:1fr}.memory{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:stretch}.memory img{height:100%;min-height:150px;aspect-ratio:auto}.memory .memory-text{padding:13px}.memory h3{font-size:18px}.music-box{align-items:flex-start}.music-player{flex-basis:100%;max-width:none}.panel{border-radius:20px}.wrap{padding:13px}.hero{padding-top:30px}}
+@media(max-width:380px){.memory{grid-template-columns:1fr}.memory img{aspect-ratio:4/3;min-height:0}.actions .btn{width:100%}.logo{width:46px;height:46px;flex-basis:46px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div id="background" aria-hidden="true"></div><div id="shade" aria-hidden="true"></div><canvas id="fx" aria-hidden="true"></canvas>
+<div class="wrap">
+<header><div class="logo">❤️</div><div><h1>A Resposta das Minhas Orações </h1><p>feito com amor, para você</p></div></header>
+<main>
+<section class="hero">
+<div class="eyebrow">para a minha futura esposa</div>
+<h2>Um cantinho no mundo<br><span>que é só nosso.</span></h2>
+<p class="lead">Cada detalhe aqui foi pensado para te lembrar do quanto você é especial para mim. ❤️</p>
+</section>
+<section class="panel" aria-labelledby="letterTitle">
+<h2 class="section-title" id="letterTitle">Meu Amor ❤️</h2>
+<p class="section-sub"></p>
+<div class="message">
+Quando penso em você, meu coração só consegue agradecer a Deus por ter colocado alguém tão especial na minha vida.Você trouxe um brilho diferente para os meus dias e curou feridas que nem eram suas, trazendo paz para lugares que precisavam de carinho.
+<br><br>
+Como diz Cânticos 4:7: “Tu és toda formosa, minha querida; em ti não há defeito.” <br><br>
+Quero continuar caminhando ao seu lado, cuidando do nosso amor e vivendo cada momento com você. Que Deus continue escrevendo a nossa história e fazendo esse amor crescer a cada dia.
+<strong class="signature">EU TE AMO COM A MINHA VIDA ❤️</strong>
+</div>
+<div class="actions"><button class="btn btn-soft" id="btnCopy">♡ Copiar mensagem</button></div>
+</section>
+<section class="panel" aria-labelledby="musicTitle">
+<h2 class="section-title" id="musicTitle">A trilha sonora do nosso cantinho ♫</h2>
+<p class="section-sub"></p>
+<div class="music-box"><div class="music-info"><div class="music-disc">♫</div><div><strong>I Wanna Be Yours — Parte Principal</strong><small></small></div></div><div class="music-player"><audio id="mainMusic" controls loop autoplay preload="auto"><source src="I Wanna Be Yours.mp3" type="audio/mpeg">Seu navegador não suporta áudio.</audio></div></div>
+<p class="photo-hint"></p>
+</section>
+<section class="panel" aria-labelledby="memoriesTitle">
+<h2 class="section-title" id="memoriesTitle">Eu Te Amo Por Completo</h2>
+<p class="section-sub"></p>
+<div class="grid">
+<article class="memory"><img src="Foto1.jpeg" alt="Uma lembrança especial de vocês" loading="lazy"><div class="memory-text"><h3>Meu Tesouro</h3><p>E eu não poderia deixar de falar do seu sorriso e dos seus olhos. Seu sorriso tem um jeito único de deixar qualquer momento mais bonito, e quando você sorri, parece que tudo ao meu redor fica mais leve. E os seus olhos... eu poderia passar horas olhando para eles e ainda assim sentir que não seria tempo suficiente. Eles têm um brilho único, uma beleza que vai muito além da aparência, porque quando olho para você, vejo a pessoa incrível que Deus colocou na minha vida. </p></div></article>
+<article class="memory"><img src="Foto2.jpg" alt="Uma foto de um momento feliz juntos" loading="lazy"><div class="memory-text"><h3>Goku e Chi-Chi</h3><p>Quando penso no Goku e na Chi-Chi, penso em alguém para viver todas as aventuras da vida ao lado. Eu quero ser assim com você: estar ao seu lado nas nossas conquistas, nos desafios, nas risadas e até nos momentos mais difíceis. Quero que a nossa história também tenha muitos capítulos, até chegarmos ao dia em que, se Deus permitir, estaremos casados, construindo nossa família e olhando para trás com a certeza de que valeu a pena viver cada aventura juntos. </p></div></article>
+<article class="memory"><img src="Foto3.jpeg" alt="Outra lembrança de vocês" loading="lazy"><div class="memory-text"><h3>Minha Jogadora</h3><p>Minha jogadora de vôlei, eu posso falar com toda certeza que tenho a melhor namorada de todas! Você é incrível dentro e fora da quadra, e eu sou muito feliz por poder te chamar de meu amor. Vou estar sempre na torcida por você, vibrando a cada ponto, cada conquista e cada sonho realizado.</p></div></article>
+</div>
+<p class="photo-hint"></p>
+</section>
+<section class="panel surprise-card">
+<div class="eyebrow">guarde este momento até o final</div>
+<h2 class="section-title" style="margin:12px 0">A última parte é só sua 💗</h2>
+<p>Preparei uma mensagem especial para você amor. Respire fundo e abra sua surpresa. ❤️</p>
+<div class="actions"><button class="btn btn-main" id="btnSurprise">Abrir minha surpresa 💌</button></div>
+</section>
+</main>
+<footer>Feito pelo seu namorado, com todo o carinho do mundo. ❤️<br></footer>
+</div>
+<div id="surpriseModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+<div class="modal-inner">
+<button class="close-x" id="closeLove" aria-label="Fechar surpresa">×</button>
+<div class="eyebrow">só para você Amor</div>
+<h2 id="modalTitle">Oii, amor da minha vida! ❤️</h2>
+<p class="dedication">Hoje completamos 1 mês juntos, e um novo capítulo da nossa história começa. Parece pouco tempo, mas, a cada dia que passa, eu percebo ainda mais o quanto você é incrível e maravilhosa. Muito obrigado por ser a minha mais linda resposta de oração. Você é um presente que Deus colocou na minha vida, e eu sou muito grato a Ele por ter permitido que nossos caminhos se encontrassem.
+<br><br>
+Quero que você saiba que pode contar comigo em todos os momentos: nos dias felizes, nos dias difíceis, quando tudo estiver bem e quando as coisas parecerem complicadas. Eu quero estar ao seu lado, te apoiar, cuidar de você e nunca desistir de nós. Você é muito especial para mim. Eu quero viver muitos outros capítulos ao seu lado, me casar com você e construir uma família linda, firmada no Senhor, colocando Deus sempre no centro da nossa história.<br><br>
+E se hoje estamos juntos, é porque Deus permitiu e cuidou de cada detalhe. Que esse seja apenas o primeiro de muitos meses, anos e momentos que ainda vamos viver juntos.<br><br><strong>EU TE AMO MUITÃO MESMO BEATRIZ ALVES DIONÍZIO❤️</strong></p>
+<img class="surprise-photo" src="FotoSurpresa.jpeg" alt="Foto especial para a surpresa" loading="lazy">
+<p class="photo-hint"></p>
+<div class="panel" style="margin:20px 0 0;text-align:left;background:#ffffff08">
+<div class="music-box"><div class="music-info"><div class="music-disc">♫</div><div><strong>Meu Abrigo — Surpresa</strong><small></small></div></div></div>
+<audio id="surpriseMusic" controls loop preload="metadata"><source src="Meu Abrigo.mp4" type="audio/mpeg"></audio>
+<p class="photo-hint"></p>
+</div>
+<p style="margin:22px 0 0;color:#ffb0c4;font-weight:700">Gostou da surpresa, amor? 💗</p>
+<button class="btn btn-soft" id="closeLoveBottom" style="margin-top:18px">Guardar essa surpresa no coração</button>
+</div>
+</div>
+<script>
+(() => {
+  const modal = document.getElementById('surpriseModal');
+  const mainMusic = document.getElementById('mainMusic');
+  const surpriseMusic = document.getElementById('surpriseMusic');
+  const openButton = document.getElementById('btnSurprise');
+  let previousFocus = null;
+  function openSurprise() {
+    previousFocus = document.activeElement;
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    mainMusic.pause();
+    surpriseMusic.currentTime = 0;
+    surpriseMusic.play().catch(() => {
+      // Alguns navegadores bloqueiam autoplay com som; o controle fica disponível para iniciar com um toque.
+    });
+    document.getElementById('closeLove').focus();
+    burstHearts();
+  }
+  function closeSurprise() {
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+    surpriseMusic.pause();
+    surpriseMusic.currentTime = 0;
+    mainMusic.play().catch(() => {
+      // Se o navegador bloquear a reprodução automática, basta tocar em play no player principal.
+    });
+    if (previousFocus) previousFocus.focus();
+  }
+  openButton.addEventListener('click', openSurprise);
+  document.getElementById('closeLove').addEventListener('click', closeSurprise);
+  document.getElementById('closeLoveBottom').addEventListener('click', closeSurprise);
+  modal.addEventListener('click', event => { if (event.target === modal) closeSurprise(); });
+  document.addEventListener('keydown', event => { if (event.key === 'Escape' && modal.classList.contains('open')) closeSurprise(); });
+  // Tenta iniciar a música assim que a página abre. Alguns navegadores exigem um toque do usuário.
+  function startMainMusic() {
+    if (!modal.classList.contains('open') && mainMusic.paused) {
+      mainMusic.play().catch(() => {});
+    }
+  }
+  mainMusic.play().catch(() => {});
+  // Se o navegador bloquear o autoplay, inicia a música no primeiro toque/clique/tecla.
+  ['pointerdown', 'touchstart', 'keydown'].forEach(eventName => {
+    document.addEventListener(eventName, startMainMusic, { once: true, passive: true });
+  });
+  document.getElementById('btnCopy').addEventListener('click', async () => {
+    const msg = 'Oii, minha boneca ❤️ Você é muito amada. Quando o mundo estiver pesado, lembra que eu tô aqui para te ouvir, te apoiar e te lembrar de que você não está sozinha. Eu te amo com a minha vida, Sophie! ❤️';
+    try { await navigator.clipboard.writeText(msg); alert('Mensagem copiada com carinho! 💌'); }
+    catch (_) { window.prompt('Copie sua mensagem:', msg); }
+  });
+
+  // Corações flutuantes leves, com quantidade limitada para não pesar no celular.
+  const canvas = document.getElementById('fx');
+  const ctx = canvas.getContext('2d');
+  let W = 0, H = 0, hearts = [];
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function resize() {
+    const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+    W = window.innerWidth; H = window.innerHeight;
+    canvas.width = Math.floor(W * dpr); canvas.height = Math.floor(H * dpr);
+    canvas.style.width = W + 'px'; canvas.style.height = H + 'px';
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  function addHeart() {
+    hearts.push({x:Math.random()*W,y:H+20,size:8+Math.random()*13,vy:.45+Math.random()*.8,vx:(Math.random()-.5)*.5,a:.5+Math.random()*.4,h:335+Math.random()*25});
+    if (hearts.length > (W < 600 ? 22 : 38)) hearts.shift();
+  }
+  function drawHeart(h) {
+    ctx.save(); ctx.translate(h.x,h.y); ctx.scale(h.size/20,h.size/20);
+    ctx.beginPath(); ctx.moveTo(0,6); ctx.bezierCurveTo(-18,-7,-10,-17,0,-8); ctx.bezierCurveTo(10,-17,18,-7,0,6);
+    ctx.fillStyle=`hsla(${h.h},90%,70%,${h.a})`; ctx.fill(); ctx.restore();
+  }
+  function animate() {
+    ctx.clearRect(0,0,W,H);
+    if (!reducedMotion && Math.random() < (W < 600 ? .07 : .12)) addHeart();
+    for (let i=hearts.length-1;i>=0;i--) {
+      const h=hearts[i]; h.y-=h.vy; h.x+=h.vx;
+      drawHeart(h);
+      if(h.y < -30) hearts.splice(i,1);
+    }
+    if (!reducedMotion) requestAnimationFrame(animate);
+  }
+  function burstHearts() {
+    for(let i=0;i<12;i++) {
+      const el=document.createElement('span'); el.className='heart-pop'; el.textContent=['❤️','💗','💕','💖'][i%4];
+      el.style.left=(10+Math.random()*80)+'%'; el.style.top=(45+Math.random()*30)+'%';
+      document.body.appendChild(el); el.addEventListener('animationend',()=>el.remove(),{once:true});
+    }
+  }
+  resize(); animate();
+  window.addEventListener('resize', resize, {passive:true});
+})();
+</script>
+</body>
+</html>
